@@ -142,3 +142,69 @@ section {
         }
     }
 }
+
+.product {
+    background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+    padding: 3em;
+    border-radius: 1em;
+    margin-bottom: 5em;
+    text-align: center;
+
+    &__title {
+        font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+        line-height: 1.1;
+        color: #fff;
+        text-shadow: 0 0 .2em rgba(#000, .2);
+        text-transform: uppercase;
+    }
+
+    &__image {
+        margin: -5em 0 0 0;
+    }
+
+    @media(min-width: 45em) {
+        text-align: left;
+        margin-bottom: 9em;
+
+        &__title {
+            margin: 0;
+        }
+
+        &__image {
+            float: right;
+            width: 65%;
+            shape-outside: url(../img/shoe-1.png);
+            margin: 0 -5em 0 0;
+            shape-margin: 1em;
+        }
+    }
+    &.shoe-left {
+        .product__image {
+            shape-outside: url(../img/shoe-2.png);
+            float: left;
+            margin: 0 0 0 -5em;
+        }
+    }
+}
+
+.hero {
+    --clr-accent: #FAA700;
+}
+
+.shoe-red {
+    --clr-inner: #FAA700;
+    --clr-outer: #E48D00;
+    --clr-accent: #A1173C;
+}
+
+.shoe-white {
+    --clr-inner: #FCE4B3;
+    --clr-outer: #EAC886;
+    --clr-accent: #2F4858;
+}
+
+.shoe-blue {
+    --clr-inner: #6DD5ED;
+    --clr-outer: #2193B0;
+    --clr-accent: #008951;
+}
